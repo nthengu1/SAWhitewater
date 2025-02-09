@@ -1,47 +1,75 @@
-//* Body */
+/* Reset styles */
 body {
-    background-color: #007BFF;  /* Primary Color (blue) */
-    color: bl;  /* Default font color (light color for text) */
-    font-family: Arial, sans-serif;  /* Default font */
-    margin: 0;
-    padding: 0;
+    margin: 0;  /* Remove margin from body */
+    padding: 0;  /* Remove padding from body */
+    background-color: blue;  /* Primary Color (blue) */
+    color: #FFFFFF;  /* Default font color (light color for text) */
+    font-family: 'Roboto', sans-serif;  /* Default body font */
+    font-size: 22px;  /* Set default font-size to 22px */
     line-height: 1.5;
     scroll-behavior: smooth;  /* Smooth scrolling */
+    text-align: center;  /* Centers text globally */
+}
+
+/* Reset margin for h2 */
+h2 {
+    margin: 0;  /* Remove margin from h2 */
+}
+
+/* Content container */
+#content {
+    width: 1600px;  /* Set width to 1600px */
+    margin: 0 auto;  /* Center the content horizontally */
+}
+
+/* Background container */
+#background {
+    height: 725px;  /* Set height to 725px */
+    background-color: #FFFFFF;  /* Optional: set background color */
 }
 
 /* Header */
 header {
-    background-color: #007BFF;  /* Secondary Color (yellow/gold) */
-   
+    background-color: #007BFF;  /* Primary Color (blue) */
+    text-align: center;  /* Centers the header content */
+    padding: 20px 0;
 }
 
 /* Logo */
+#logo_link {
+    padding-top: 5px;  /* Add padding-top to logo link */
+}
+
 #logo_link img {
-    width: 150px;  /* Adjust logo size */
+    width: 80px;  /* Adjust logo size */
+    border-radius: 50%;  /* Make the logo round */
     max-width: 100%;  /* Ensure responsiveness */
 }
 
 /* Navigation links */
 nav a {
-    color: white;  /* Accent 1 Color (red) */
+    color: white;  /* Text color for navigation links */
     text-decoration: none;
-    font-size: 16px;  /* Font size for nav links */
-    padding: 10px 15px;
+    font-size: 19px;  /* Font size for nav links */
+    padding: 35px;  /* Add padding to navigation links */
     display: inline-block;
+    margin: 0 10px;  /* Space between navigation links */
 }
 
 nav a:hover {
-    background-color: #E7C24F;
+    background-color: #E7C24F;  /* Secondary Color (gold) */
     color: black;  /* Change color on hover */
 }
 
 /* Headings (h1-h6) */
 h1, h2, h3, h4, h5, h6 {
-    color: black;  /* Light color for headings */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', serif;  /* Set headline font to Georgia */
+    color: White;  /* Light color for headings */
     margin-left: 30px;
+    text-align: center;  /* Centers headings */
 }
 
+/* Specific sizes for h1, h2, etc. */
 h1 {
     font-size: 36px;  /* Larger size for h1 */
     margin-bottom: 20px;
@@ -57,21 +85,38 @@ h3 {
     margin-bottom: 10px;
 }
 
+h4 {
+    font-size: 20px;  /* Slightly smaller size for h4 */
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 18px;  /* Smaller size for h5 */
+    margin-bottom: 10px;
+}
+
+h6 {
+    font-size: 16px;  /* Smallest size for h6 */
+    margin-bottom: 10px;
+}
+
 /* Paragraphs */
 p {
-    color: black;  /* Default color for paragraphs */
+    color: white;  /* Default color for paragraphs */
     font-size: 16px;  /* Font size for paragraphs */
     line-height: 1.6;
     margin-bottom: 15px;
+    text-align: center;  /* Centers paragraphs */
 }
 
 /* Footer */
 footer {
     background-color: #A43312;  /* Accent 1 Color (red) */
-    padding: 20px;
+    padding: 25px 50px;  /* Add padding to footer */
     color: white;
     font-size: 1em;
     text-align: center;
+    margin-top: 200px;  /* Margin added to footer */
 }
 
 footer p {
@@ -89,6 +134,7 @@ footer .social a img {
     height: 40px; /* Keep the icons square */
     margin: 0 10px; /* Space between icons */
     transition: transform 0.3s ease; /* Smooth hover transition */
+    padding-top: 15px;  /* Add padding-top to the social icons */
 }
 
 footer .social a:hover img {
@@ -98,5 +144,118 @@ footer .social a:hover img {
 /* Button */
 .button-box a {
     background-color: #E7C24F;  /* Secondary Color (yellow/gold) */
- 
+    color: black;  /* Button text color */
+    padding: 15px 30px;  /* Add padding to buttons */
+    text-decoration: none;
+    border-radius: 5px;  /* Rounded corners */
+    font-size: 18px;
+    margin-top: 20px;  /* Margin top added for spacing */
+}
 
+.button-box a:hover {
+    background-color: #A43312;  /* Accent 1 Color (red) on hover */
+    color: white;  /* Change text color on hover */
+}
+
+/* Icons */
+.icon {
+    width: 80px;  /* Adjust icon size */
+    padding-top: 10px;  /* Add padding-top to icons */
+    max-width: 100%;  /* Ensure responsiveness */
+}
+
+/* Adjusting card and image styles for centering */
+.main-content {
+    display: flex;
+    justify-content: center;  /* Center align cards */
+    flex-wrap: wrap;  /* Allow wrapping of cards on smaller screens */
+    gap: 20px;  /* Space between cards */
+}
+
+.card {
+    width: 300px;  /* Fixed card width */
+    text-align: center;  /* Center content inside the card */
+}
+
+/* Hero Section */
+#hero {
+    position: relative;  /* Ensures absolute positioning for hero image */
+    width: 100%;  /* Full width of the viewport */
+    height: 725px;  /* Height of the hero section */
+    overflow: hidden;  /* Prevents content from overflowing */
+}
+
+#hero-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;  /* Positions hero image relative to #hero */
+    top: 0;
+    left: 0;
+}
+
+#hero-img {
+    width: 100%;
+    height: 100%;  /* Makes the image cover the full hero section */
+    object-fit: cover;  /* Ensures the image covers the area without distortion */
+}
+
+#hero-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centers the message both vertically and horizontally */
+    text-align: center;  /* Centers the text */
+    color: white;  /* White text color for contrast */
+}
+
+.home-title {
+    font-size: 2em;  /* Set font-size to 2em (twice the body font size) */
+    margin-bottom: 10px;  /* Space between the title and the subheading */
+    margin-top: 10px;  /* Margin top added */
+}
+
+
+
+.button-box {
+    display: inline-block;  /* Makes the button box inline with content */
+}
+
+.button-box a.book {
+    background-color: #E7C24F;  /* Secondary color (gold) */
+    color: white;  /* Text color for the button */
+    padding: 15px 30px;
+    font-size: 18px;  /* Font size for the button text */
+    text-decoration: none;
+    border-radius: 5px;  /* Rounded corners for the button */
+    transition: background-color 0.3s ease;  /* Smooth hover effect */
+    margin-top: 50px;  /* Margin top added */
+}
+
+.button-box a.book:hover {
+    background-color: #A43312;  /* Accent 1 color (red) on hover */
+    color: white;  /* Text color changes to white on hover */
+}
+
+/* Cards */
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;  /* Margin top and bottom for cards */
+}
+
+/* Add border-radius and borders */
+.book, .join {
+    background-color: #d9c2a3;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;  /* Add border-radius to buttons */
+}
+
+.card-img {
+    border: 10px solid #E7C24F;  /* Border added to card image using secondary color (gold) */
+}
+
+main section img {
+    box-sizing: border-box;  /* Include border in image size */
+}
